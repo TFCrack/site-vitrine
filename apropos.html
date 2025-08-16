@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil La céramique qui baroude</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <header>
+
+    <nav class="navbar" role="navigation">
+        <div class="logo-container">
+  <a href="accueil.html" class="logo-link">
+    <img src="logo.svg" alt="Logo" class="logo-img">
+  </a>
+  <span class="logo-text">TFC - La céramique qui baroude</span>
+</div>
+
+      <button class="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links" id="menu" role="menu">
+        <li><a href="accueil.html" role="menuitem">Accueil</a></li>
+        <li><a href="collection1.html" role="menuitem">Collection 1</a></li>
+        <li><a href="collection2.html" role="menuitem">Collection 2</a></li>
+        <li><a href="apropos.html" role="menuitem">À propos</a></li>
+        <li><a href="services.html" role="menuitem">Mes services</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    
+    <section class="banner">
+<main class="about-section">
+  <div class="profile-image">
+    <img src="phototravail.webp" alt="Portrait" class="hover-img">
+  </div>
+ 
+  <div class="about-text">
+    <p></p>
+Je suis céramiste, créatrice curieuse et passionnée. Créatrice-baroudeuse avant tout, je navigue entre le dessin et l’objet dans un éternel aller-retour. Ce va-et-vient nourrit mon geste, affine mon regard, et donne naissance à des pièces qui racontent plus qu’elles ne décorent.
+J’ai compris que ce qui me berce, ce n’est pas la terre, ni la forme, ni la couleur — c’est le faire. Le faire dans sa plus simple expression, dans sa plus vibrante nécessité. Et la céramique, avec sa patience et sa vérité, répond pleinement à ce besoin.
+J’aime comprendre et faire avec ce que le monde nous offre. 
+Chaque création est une réponse, résultat d'une exploration, une trace du temps.
+</main>
+</section>
+
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    function toggleMenu() {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('active');
+    }
+
+    burger.addEventListener('click', toggleMenu);
+
+    burger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        burger.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 - Mentions légales</p>
+    <a href="https://instagram.com/tfceramic" target="_blank">Instagram</a>
+    <button onclick="document.getElementById('contact-form').style.display='block'" class="contact-btn">Contact</button>
+  </div>
+
+  <div id="contact-form" style="display:none;">
+    <h2>Me contacter</h2>
+    <form action="typhainefaunierese@gmail.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <label>Nom & Prénom</label>
+        <input type="text" name="nom" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Envoyer</button>
+</form>
+    </div>
+  </footer>
+</body>
+</html>

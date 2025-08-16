@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil La céramique qui baroude</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar" role="navigation">
+      <div class="logo">TFC - La céramique qui baroude</div>
+      <button class="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links" id="menu" role="menu">
+        <li><a href="site.html" role="menuitem">Accueil</a></li>
+        <li><a href="collection1.html" role="menuitem">Collection 1</a></li>
+        <li><a href="collection2.html" role="menuitem">Collection 2</a></li>
+        <li><a href="apropos.html" role="menuitem">À propos</a></li>
+        <li><a href="services.html" role="menuitem">Mes services</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner">
+      <h1>Bienvenue dans le chaos organisé — l’art comme baston douce, comme feu sous la peau, là où l’argile se rebelle et raconte des mondes.
+Rien n’est sage, tout est vivant. Tu entres ? On t’attendait.
+</h1>
+      <p>Voici l’atelier où prennent vie des créatures céramiques, chaque pièce est un éclat de terrain, une trace de passage, une insurrection en argile, un cri modelé à la main, une claque à la fadeur.  
+Ici, les objets ont des jambes, les couleurs font du bruit, et la matière rêve en grand.  </p>
+    </section>
+
+    <section class="gallery">
+      <div class="item">
+        <img src="image1.webp" alt="Collection 1" width="300" height="200">
+        <a href="collection1.html" class="cta">Découvrir Collection 1</a>
+      </div>
+      <div class="item">
+        <img src="image2.webp" alt="Collection 2" width="300" height="200">
+        <a href="collection2.html" class="cta">Découvrir Collection 2</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    function toggleMenu() {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('active');
+    }
+
+    burger.addEventListener('click', toggleMenu);
+
+    burger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        burger.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

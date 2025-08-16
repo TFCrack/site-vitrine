@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil La céramique qui baroude</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <header>
+
+    <nav class="navbar" role="navigation">
+        <div class="logo-container">
+  <a href="accueil.html" class="logo-link">
+    <img src="logo.svg" alt="Logo" class="logo-img">
+  </a>
+  <span class="logo-text">TFC - L'atelier des trajectoires déviantes</span>
+</div>
+
+      <button class="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links" id="menu" role="menu">
+        <li><a href="accueil.html" role="menuitem">Accueil</a></li>
+        <li><a href="collection1.html" role="menuitem">Collection 1</a></li>
+        <li><a href="collection2.html" role="menuitem">Collection 2</a></li>
+        <li><a href="apropos.html" role="menuitem">À propos</a></li>
+        <li><a href="services.html" role="menuitem">Mes services</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="banner">
+          <h1>Cartes Sensibles en Faïence Blanche</h1>
+      <p>Vision : Vivre nos territoires à travers des dessins intuitifs et colorés, dessiner le monde à travers les sens— comme si chaque couleur était une humeur et chaque forme un souvenir flou.  
+<p>Mission : Proposer une lecture affective du monde à travers l’objet, une collection qui met en valeur ce qui ne se mesure pas : le sensible, l’intuitif, le pas très carré... pour résister à l’idée qu’un objet doit toujours “servir à quelque chose”, comme un acte de revalorisation du sensible.  
+a agencer avec La collection en faïence, quant à elle, parle du réel vécu. À la surface d’un engobe blanc — page vierge — j’inscris des cartographies sensibles, comme des journaux visuels de balades dans le monde. Ces formes accueillent les plantes, les poches vides et les traces du quotidien ; elles deviennent des supports d’une mémoire intime, où chaque trait, chaque couleur, retranscrit une émotion.</p>
+</p>
+
+<p class="section-title">Les lampes géographiquement instables</p>
+<div class="image-gallery">
+  <div class="image-card" onclick="openModal('desc1')">
+    <img src="collection2/lampe1.webp" alt="Image 1">
+  </div>
+  
+  <div class="image-card" onclick="openModal('desc2')">
+    <img src="collection2/lampe2.webp" alt="Image 2">
+  </div>
+</div>
+
+<p class="section-title">Ecrins pour accueillir des objets du quotidien chargés de vécu</p>
+<div class="image-gallery">
+  <div class="image-card" onclick="openModal('desc4')">
+    <img src="collection2/videp_2.webp" alt="Image 4">
+  </div>
+  <div class="image-card" onclick="openModal('desc5')">
+    <img src="collection2/videpbis.webp" alt="Image 5">
+  </div>
+  <div class="image-card" onclick="openModal('desc6')">
+    <img src="collection2/bol1_map.webp" alt="Image 6">
+  </div>
+</div>
+
+<p class="section-title">Boite pleine d'histoires inédites</p>
+<div class="image-gallery">
+  <div class="image-card" onclick="openModal('desc7')">
+    <img src="collection2/boite.webp" alt="Image 7">
+  </div>
+
+<!-- Modals -->
+<div id="desc1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('desc1')">&times;</span>
+    <p class= section-title>Lampe</p>
+    <p>Tournée, engobée, dessinée, émaillée à la main, cette pièce unique raconte des territoires traversés.</p>
+  </div>
+</div>
+
+<div id="desc2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('desc2')">&times;</span>
+    <p class= section-title>Lampe</p>
+    <p>Deuxième de la série, elle relate un autre souvenir, déformé par l'oubli, transformée par la forme même du pied qui ne permet pas la même lecture que les dessins réalisés dans un premier temps.</p>
+  </div>
+</div>
+
+<div id="desc3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('desc3')">&times;</span>
+     <p class= section-title>Ecrin</p>
+  <p>Un vide poche c'est bien, un écrin qui évite les pertes de tes objets les plus précieux c'est mieux!</p>
+  </div>
+ </div>
+
+<div id="desc4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('desc4')">&times;</span>
+    <p class= section-title>Ecrin</p>
+    <p>Un écrin, une nouvelle carte à lire, à decouvrir, à interpreter.</p>
+<p>Le pied et ce qu'il cache reserve bien des surprises</p>
+<p>Derrière toute création tu trouveras la signature et de belles surprises, des dessins bonus d'engobes, d'émail...</p>
+     <div class="vignettes">
+      <img src="collection2/videp1_map.webp" alt="Détail 1">
+      <img src="collection2/videp_3.webp" alt="Détail 2">
+    </div>
+  </div>
+</div>
+
+<div id="desc5" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('desc5')">&times;</span>
+  <p class= section-title>Ecrin</p>
+  <p></p>
+  <p></p>
+</div>
+</div>
+
+<div id="desc6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('desc6')">&times;</span>
+   <p class= section-title>Bol</p>
+  <p>Un pot qui raconte une histoire digne des plus gros livres</p>
+  <p></p>
+   <div class="vignettes">
+      <img src="collection2/bol2_map.webp" alt="Détail 1">
+      <img src="collection2/bol_map.webp" alt="Détail 2">
+  </div>
+</div>
+
+<div id="desc7" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('desc7')">&times;</span>
+    <p class= section-title>Boite</p>
+
+    <div class="vignettes">
+      <img src="collection2/boite2_map.webp" alt="Détail 1">
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+</main>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.add('show');
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('show');
+  }
+</script>
+
+<!-- menu burger -->
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    function toggleMenu() {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('active');
+    }
+
+    burger.addEventListener('click', toggleMenu);
+
+    burger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        burger.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 - Mentions légales</p>
+    <a href="https://instagram.com/tfceramic" target="_blank">Instagram</a>
+    <button onclick="document.getElementById('contact-form').style.display='block'" class="contact-btn">Contact</button>
+  </div>
+
+  <div id="contact-form" style="display:none;">
+    <h2>Me contacter</h2>
+    <form action="typhainefaunierese@gmail.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <label>Nom & Prénom</label>
+        <input type="text" name="nom" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Envoyer</button>
+    </form>
+</div>
+  </footer>
+</body>
+</html>
